@@ -28,7 +28,6 @@ public class CountryServiceImpl implements CountryService {
 			return null;
 		}
 		Country country = countryOpt.get();
-		
 		Period period = this.differenceBetweenDates.calculateYearsOfIndependency(country.getCountryIndependenceDate());
 		return CountryDto.builder()
 				.countryName(country.getCountryName())
