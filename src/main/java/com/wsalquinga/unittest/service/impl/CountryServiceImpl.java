@@ -13,8 +13,8 @@ import com.wsalquinga.unittest.util.DifferenceBetweenDates;
 
 @Service
 public class CountryServiceImpl implements CountryService {
-	private CountryRepository countryRepository;
-	private DifferenceBetweenDates differenceBetweenDates;
+	private final CountryRepository countryRepository;
+	private final DifferenceBetweenDates differenceBetweenDates;
 
 	public CountryServiceImpl(CountryRepository countryRepository, DifferenceBetweenDates differenceBetweenDates) {
 		this.countryRepository = countryRepository;
@@ -28,7 +28,7 @@ public class CountryServiceImpl implements CountryService {
 			return null;
 		}
 		Country country = countryOpt.get();
-		Period period = this.differenceBetweenDates.calculateYearsOfIndependency(country.getCountryIndependenceDate());
+		Period period = this.differenceBetweenDates.calculateYearsOfIndependence(country.getCountryIndependenceDate());
 		return CountryDto.builder()
 				.countryName(country.getCountryName())
 				.countryCapital(country.getCountryCapital())

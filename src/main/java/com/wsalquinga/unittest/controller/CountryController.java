@@ -10,7 +10,7 @@ import com.wsalquinga.unittest.service.CountryService;
 
 @RestController()
 public class CountryController {
-	private CountryService countryService;
+	private final CountryService countryService;
 
 	public CountryController(CountryService countryService) {
 		this.countryService = countryService;

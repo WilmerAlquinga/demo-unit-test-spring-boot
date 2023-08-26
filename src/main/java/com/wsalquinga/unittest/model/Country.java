@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Builder;
 import lombok.Data;
 
 @Entity
@@ -27,4 +28,5 @@ public class Country {
 
 	@Column(name = "country_independence_date")
 	private String countryIndependenceDate;
+
 }

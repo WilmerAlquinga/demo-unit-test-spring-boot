@@ -12,14 +12,14 @@ public class DifferenceBetweenDatesTest {
 	private DifferenceBetweenDates differenceBetweenDates;
 
 	@Test
-	void calculateYearsOfIndependency() {
+	void calculateYearsOfIndependence() {
 		this.differenceBetweenDates = new DifferenceBetweenDates();
-		String independencyDate = "24/05/1822";
+		String independenceDate = "24/05/1822";
 		
-		Period result = this.differenceBetweenDates.calculateYearsOfIndependency(independencyDate);
+		Period result = this.differenceBetweenDates.calculateYearsOfIndependence(independenceDate);
 
 		Assertions.assertEquals(201, result.getYears());
-		Assertions.assertEquals(1, result.getMonths());
-		Assertions.assertEquals(12, result.getDays());
+		Assertions.assertEquals(3, result.getMonths());
+		Assertions.assertEquals(2, result.getDays());
 	}
 }

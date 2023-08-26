@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DifferenceBetweenDates {
 	
-	public Period calculateYearsOfIndependency(String independenceDay) {
+	public Period calculateYearsOfIndependence(String independenceDay) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		
 		LocalDate localDate = LocalDate.parse(independenceDay, formatter);
